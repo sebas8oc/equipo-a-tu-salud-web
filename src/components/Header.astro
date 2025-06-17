@@ -1,0 +1,108 @@
+---
+---
+
+<header class="header">
+	<div class="container">
+		<div class="header-content">
+			<div class="logo">
+				<h1>EQUIPO A TU SALUD</h1>
+				<p>ENSAYOS Y LABORATORIOS</p>
+				<span class="tagline">Servicios de salud para mejorar tu calidad de vida</span>
+			</div>
+			<div class="header-actions">
+				<a href="#contacto" class="btn btn-primary">Contactar</a>
+				<a href="#precios" class="btn btn-outline">Ver Precios</a>
+			</div>
+		</div>
+		<div class="established">
+			<span>Establecida en 2019</span>
+		</div>
+	</div>
+</header>
+
+<style>
+	.header {
+		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+		color: white;
+		padding: 2rem 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.header::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+		opacity: 0.3;
+	}
+
+	.header-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	.logo h1 {
+		color: white;
+		font-size: 2rem;
+		font-weight: 700;
+		margin-bottom: 0.25rem;
+	}
+
+	.logo p {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 0.9rem;
+		font-weight: 500;
+		margin-bottom: 0.5rem;
+	}
+
+	.tagline {
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 0.875rem;
+		font-style: italic;
+	}
+
+	.header-actions {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+	}
+
+	.established {
+		margin-top: 1rem;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	.established span {
+		background: rgba(255, 255, 255, 0.1);
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		font-size: 0.875rem;
+		backdrop-filter: blur(10px);
+	}
+
+	@media (max-width: 768px) {
+		.header-content {
+			flex-direction: column;
+			text-align: center;
+			gap: 1.5rem;
+		}
+
+		.logo h1 {
+			font-size: 1.5rem;
+		}
+
+		.header-actions {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+</style>

@@ -1,0 +1,173 @@
+---
+---
+
+<section id="servicios" class="section" style="background: var(--neutral-100);">
+	<div class="container">
+		<div class="section-header">
+			<h2>Nuestros Servicios</h2>
+			<p>Ofrecemos una amplia gama de servicios de salud personalizados</p>
+		</div>
+		
+		<div class="services-grid">
+			<div class="service-card">
+				<div class="service-icon">👩‍⚕️</div>
+				<h3>Auxiliar de Enfermería</h3>
+				<p>Profesionales capacitados para brindar atención médica especializada en el hogar.</p>
+			</div>
+			
+			<div class="service-card">
+				<div class="service-icon">👨‍👩‍👧‍👦</div>
+				<h3>Cuidadores</h3>
+				<p>Cuidado integral para adultos e infantes con atención personalizada las 24 horas.</p>
+			</div>
+			
+			<div class="service-card">
+				<div class="service-icon">🏥</div>
+				<h3>Acompañamiento Hospitalario</h3>
+				<p>Compañía y apoyo durante estancias hospitalarias para mayor tranquilidad.</p>
+			</div>
+			
+			<div class="service-card">
+				<div class="service-icon">🩺</div>
+				<h3>Consultas Médicas</h3>
+				<p>Atención médica profesional en la comodidad de su hogar.</p>
+			</div>
+			
+			<div class="service-card">
+				<div class="service-icon">👶</div>
+				<h3>Cuidados Primera Infancia</h3>
+				<p>Atención especializada para bebés y niños pequeños con cuidado experto.</p>
+			</div>
+			
+			<div class="service-card">
+				<div class="service-icon">🏥</div>
+				<h3>Cuidados Post-Operatorios</h3>
+				<p>Seguimiento y cuidado especializado después de intervenciones quirúrgicas.</p>
+			</div>
+		</div>
+
+		<div class="team-principles">
+			<h3>Principios de Nuestro Equipo</h3>
+			<div class="principles-grid">
+				<div class="principle">Compromiso</div>
+				<div class="principle">Colaboración</div>
+				<div class="principle">Solidaridad</div>
+				<div class="principle">Paciencia</div>
+				<div class="principle">Comunicación</div>
+				<div class="principle">Aprendizaje</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.section-header h2 {
+		color: var(--primary);
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.section-header p {
+		font-size: 1.125rem;
+		color: var(--neutral-600);
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.service-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		text-align: center;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease;
+		border-top: 4px solid var(--primary);
+	}
+
+	.service-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+	}
+
+	.service-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		display: block;
+	}
+
+	.service-card h3 {
+		color: var(--primary);
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+	}
+
+	.service-card p {
+		color: var(--neutral-600);
+		line-height: 1.6;
+	}
+
+	.team-principles {
+		background: white;
+		padding: 3rem;
+		border-radius: 16px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		text-align: center;
+	}
+
+	.team-principles h3 {
+		color: var(--primary);
+		font-size: 1.75rem;
+		margin-bottom: 2rem;
+	}
+
+	.principles-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.principle {
+		background: linear-gradient(135deg, var(--secondary), var(--primary));
+		color: white;
+		padding: 0.75rem 1.5rem;
+		border-radius: 25px;
+		font-weight: 500;
+		font-size: 0.9rem;
+		transition: all 0.2s ease;
+	}
+
+	.principle:hover {
+		transform: scale(1.05);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	@media (max-width: 768px) {
+		.services-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.service-card {
+			padding: 1.5rem;
+		}
+
+		.team-principles {
+			padding: 2rem 1rem;
+		}
+
+		.section-header h2 {
+			font-size: 2rem;
+		}
+	}
+</style>

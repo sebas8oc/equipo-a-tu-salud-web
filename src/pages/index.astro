@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import About from '../components/About.astro';
+import Services from '../components/Services.astro';
+import Team from '../components/Team.astro';
+import Pricing from '../components/Pricing.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="EQUIPO A TU SALUD - Servicios de Salud Profesionales" description="Servicios profesionales de salud domiciliaria en Bogotá. Auxiliares de enfermería, cuidadores, acompañamiento hospitalario y más. Establecidos desde 2019.">
+	<Header />
+	<main>
+		<About />
+		<Services />
+		<Team />
+		<Pricing />
+		<Contact />
+	</main>
+	<Footer />
+	
+	<!-- Floating WhatsApp Button -->
+	<a href="https://wa.me/573144906672" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+		<div class="whatsapp-icon">💬</div>
+	</a>
+</Layout>
+
+<style>
+	main {
+		position: relative;
+	}
+
+	.whatsapp-float {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		width: 60px;
+		height: 60px;
+		background: #25D366;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		transition: all 0.3s ease;
+		z-index: 1000;
+		text-decoration: none;
+		animation: pulse 2s infinite;
+	}
+
+	.whatsapp-float:hover {
+		transform: scale(1.1);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+	}
+
+	.whatsapp-icon {
+		font-size: 1.5rem;
+		color: white;
+	}
+
+	@keyframes pulse {
+		0% {
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(37, 211, 102, 0.7);
+		}
+		70% {
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 10px rgba(37, 211, 102, 0);
+		}
+		100% {
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(37, 211, 102, 0);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.whatsapp-float {
+			width: 50px;
+			height: 50px;
+			bottom: 1rem;
+			right: 1rem;
+		}
+
+		.whatsapp-icon {
+			font-size: 1.25rem;
+		}
+	}
+</style>

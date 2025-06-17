@@ -1,0 +1,215 @@
+---
+---
+
+<section id="equipo" class="section">
+	<div class="container">
+		<div class="section-header">
+			<h2>Prestadoras Destacadas</h2>
+			<p>Conoce a nuestro equipo de profesionales experimentados</p>
+		</div>
+		
+		<div class="team-grid">
+			<div class="team-member">
+				<div class="member-avatar">
+					<div class="avatar-placeholder">IS</div>
+				</div>
+				<div class="member-info">
+					<h3>Ivón Sierra</h3>
+					<p class="experience">3 años de experiencia</p>
+					<div class="specialties">
+						<span class="specialty">Cuidados Generales</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="team-member featured">
+				<div class="member-avatar">
+					<div class="avatar-placeholder">AL</div>
+				</div>
+				<div class="member-info">
+					<h3>Alexandra Lozano</h3>
+					<p class="role">Jefe Asistencial</p>
+					<div class="specialties">
+						<span class="specialty">Liderazgo</span>
+						<span class="specialty">Supervisión</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="team-member">
+				<div class="member-avatar">
+					<div class="avatar-placeholder">GB</div>
+				</div>
+				<div class="member-info">
+					<h3>Gladis Beltrán</h3>
+					<p class="experience">5 años de experiencia</p>
+					<div class="specialties">
+						<span class="specialty">Cuidados Especializados</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="cta-section">
+			<h3>¿Necesitas nuestros servicios?</h3>
+			<p>Contacta con nosotros para una cotización personalizada</p>
+			<a href="#contacto" class="btn btn-primary">Solicitar Cotización</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.section-header h2 {
+		color: var(--primary);
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.section-header p {
+		font-size: 1.125rem;
+		color: var(--neutral-600);
+	}
+
+	.team-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.team-member {
+		background: white;
+		padding: 2rem;
+		border-radius: 16px;
+		text-align: center;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease;
+		position: relative;
+	}
+
+	.team-member:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+	}
+
+	.featured {
+		border: 2px solid var(--secondary);
+		transform: scale(1.02);
+	}
+
+	.featured::before {
+		content: '⭐ JEFE ASISTENCIAL';
+		position: absolute;
+		top: -12px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--secondary);
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		font-size: 0.75rem;
+		font-weight: bold;
+	}
+
+	.member-avatar {
+		margin-bottom: 1.5rem;
+	}
+
+	.avatar-placeholder {
+		width: 80px;
+		height: 80px;
+		margin: 0 auto;
+		background: linear-gradient(135deg, var(--primary), var(--secondary));
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+	.member-info h3 {
+		color: var(--primary);
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.experience, .role {
+		color: var(--neutral-600);
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
+
+	.role {
+		color: var(--secondary);
+		font-weight: 600;
+	}
+
+	.specialties {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	.specialty {
+		background: var(--neutral-100);
+		color: var(--neutral-700);
+		padding: 0.25rem 0.75rem;
+		border-radius: 12px;
+		font-size: 0.875rem;
+		border: 1px solid var(--neutral-200);
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, var(--primary), var(--secondary));
+		color: white;
+		padding: 3rem;
+		border-radius: 16px;
+		text-align: center;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	}
+
+	.cta-section h3 {
+		color: white;
+		font-size: 1.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.cta-section p {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 1.125rem;
+		margin-bottom: 2rem;
+	}
+
+	.cta-section .btn {
+		background: white;
+		color: var(--primary);
+		font-weight: 600;
+	}
+
+	.cta-section .btn:hover {
+		background: var(--neutral-100);
+		transform: translateY(-2px);
+	}
+
+	@media (max-width: 768px) {
+		.team-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.cta-section {
+			padding: 2rem 1rem;
+		}
+
+		.section-header h2 {
+			font-size: 2rem;
+		}
+	}
+</style>

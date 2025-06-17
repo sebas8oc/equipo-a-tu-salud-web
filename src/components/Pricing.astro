@@ -1,0 +1,329 @@
+---
+---
+
+<section id="precios" class="section" style="background: var(--neutral-100);">
+	<div class="container">
+		<div class="section-header">
+			<h2>Tarifas 2025</h2>
+			<p>Precios transparentes y competitivos para todos nuestros servicios</p>
+		</div>
+		
+		<div class="pricing-container">
+			<div class="pricing-table">
+				<table>
+					<thead>
+						<tr>
+							<th>Servicio</th>
+							<th>6 Horas</th>
+							<th>8 Horas</th>
+							<th>12 Horas</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="service-name">
+								<div class="service-icon">👩‍⚕️</div>
+								<span>Auxiliar de Enfermería</span>
+							</td>
+							<td class="price">$70,000</td>
+							<td class="price">$95,000</td>
+							<td class="price featured-price">$115,000</td>
+						</tr>
+						<tr>
+							<td class="service-name">
+								<div class="service-icon">👥</div>
+								<span>Cuidadora/Niñera</span>
+							</td>
+							<td class="price">$60,000</td>
+							<td class="price">$80,000</td>
+							<td class="price featured-price">$93,000</td>
+						</tr>
+						<tr>
+							<td class="service-name">
+								<div class="service-icon">🏠</div>
+								<span>Servicio General</span>
+							</td>
+							<td class="price">$60,000</td>
+							<td class="price">$80,000</td>
+							<td class="price featured-price">$90,000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="pricing-notes">
+				<h3>Información Adicional</h3>
+				<div class="notes-grid">
+					<div class="note-item">
+						<div class="note-icon">🕐</div>
+						<div class="note-content">
+							<h4>Tarifa por Hora</h4>
+							<p><strong>Enfermería:</strong> $17,000/hora</p>
+							<p><strong>Otros servicios:</strong> $11,000/hora</p>
+						</div>
+					</div>
+					
+					<div class="note-item">
+						<div class="note-icon">🌙</div>
+						<div class="note-content">
+							<h4>Servicio 24 Horas</h4>
+							<p>Solicitar cotización personalizada en contabilidad</p>
+						</div>
+					</div>
+					
+					<div class="note-item">
+						<div class="note-icon">📅</div>
+						<div class="note-content">
+							<h4>Servicio Dominical</h4>
+							<p>Incluye incremento adicional sobre tarifa base</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="pricing-cta">
+			<h3>¿Necesitas un servicio personalizado?</h3>
+			<p>Contáctanos para obtener una cotización ajustada a tus necesidades específicas</p>
+			<div class="cta-buttons">
+				<a href="#contacto" class="btn btn-primary">Solicitar Cotización</a>
+				<a href="tel:3144906672" class="btn btn-secondary">Llamar Ahora</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.section-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.section-header h2 {
+		color: var(--primary);
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.section-header p {
+		font-size: 1.125rem;
+		color: var(--neutral-600);
+	}
+
+	.pricing-container {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.pricing-table {
+		background: white;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		margin-bottom: 3rem;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	thead {
+		background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+		color: white;
+	}
+
+	th, td {
+		padding: 1.5rem 1rem;
+		text-align: center;
+	}
+
+	th {
+		font-weight: 600;
+		font-size: 1.1rem;
+	}
+
+	tbody tr {
+		border-bottom: 1px solid var(--neutral-200);
+	}
+
+	tbody tr:hover {
+		background: var(--neutral-50);
+	}
+
+	.service-name {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		text-align: left !important;
+		font-weight: 500;
+		color: var(--neutral-700);
+	}
+
+	.service-icon {
+		font-size: 1.5rem;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--neutral-100);
+		border-radius: 8px;
+	}
+
+	.price {
+		font-weight: 600;
+		font-size: 1.1rem;
+		color: var(--neutral-700);
+	}
+
+	.featured-price {
+		background: linear-gradient(135deg, var(--secondary), var(--primary));
+		color: white;
+		border-radius: 8px;
+		position: relative;
+	}
+
+	.pricing-notes {
+		background: white;
+		padding: 2rem;
+		border-radius: 16px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		margin-bottom: 3rem;
+	}
+
+	.pricing-notes h3 {
+		color: var(--primary);
+		text-align: center;
+		margin-bottom: 2rem;
+		font-size: 1.5rem;
+	}
+
+	.notes-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.note-item {
+		display: flex;
+		gap: 1rem;
+		align-items: flex-start;
+	}
+
+	.note-icon {
+		font-size: 1.5rem;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(135deg, var(--primary), var(--secondary));
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+
+	.note-content h4 {
+		color: var(--primary);
+		margin-bottom: 0.5rem;
+		font-size: 1.1rem;
+	}
+
+	.note-content p {
+		color: var(--neutral-600);
+		font-size: 0.9rem;
+		line-height: 1.4;
+		margin-bottom: 0.25rem;
+	}
+
+	.pricing-cta {
+		background: linear-gradient(135deg, var(--primary), var(--secondary));
+		color: white;
+		padding: 3rem;
+		border-radius: 16px;
+		text-align: center;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	}
+
+	.pricing-cta h3 {
+		color: white;
+		font-size: 1.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.pricing-cta p {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 1.125rem;
+		margin-bottom: 2rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.cta-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.cta-buttons .btn {
+		background: white;
+		color: var(--primary);
+		font-weight: 600;
+	}
+
+	.cta-buttons .btn-secondary {
+		background: var(--secondary);
+		color: white;
+	}
+
+	.cta-buttons .btn:hover {
+		transform: translateY(-2px);
+	}
+
+	/* Mobile Responsive */
+	@media (max-width: 768px) {
+		.pricing-table {
+			overflow-x: auto;
+		}
+
+		table {
+			min-width: 600px;
+		}
+
+		th, td {
+			padding: 1rem 0.5rem;
+		}
+
+		.service-name {
+			min-width: 180px;
+		}
+
+		.service-name span {
+			font-size: 0.9rem;
+		}
+
+		.notes-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.pricing-cta {
+			padding: 2rem 1rem;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.cta-buttons .btn {
+			width: 100%;
+			max-width: 250px;
+		}
+
+		.section-header h2 {
+			font-size: 2rem;
+		}
+	}
+</style>
