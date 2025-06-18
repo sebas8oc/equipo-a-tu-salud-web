@@ -3,19 +3,69 @@
 
 <header class="header">
 	<div class="container">
-		<div class="header-content">
-			<div class="logo">
+		<nav class="nav">
+			<div class="logo animate-on-scroll">
 				<h1>EQUIPO A TU SALUD</h1>
 				<p>ENSAYOS Y LABORATORIOS</p>
-				<span class="tagline">Servicios de salud para mejorar tu calidad de vida</span>
+			</div>
+			<div class="nav-links">
+				<a href="#servicios" class="nav-link animate-on-scroll">Servicios</a>
+				<a href="#equipo" class="nav-link animate-on-scroll">Equipo</a>
+				<a href="#precios" class="nav-link animate-on-scroll">Precios</a>
+				<a href="#contacto" class="nav-link animate-on-scroll">Contacto</a>
 			</div>
 			<div class="header-actions">
-				<a href="#contacto" class="btn btn-primary">Contactar</a>
-				<a href="#precios" class="btn btn-outline">Ver Precios</a>
+				<a href="tel:+573144906672" class="btn btn-outline animate-on-scroll">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+					</svg>
+					Llamar
+				</a>
+				<a href="#contacto" class="btn btn-primary animate-on-scroll">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+					</svg>
+					Contactar
+				</a>
 			</div>
-		</div>
-		<div class="established">
-			<span>Establecida en 2019</span>
+			<button class="mobile-menu-btn" aria-label="Menú" aria-expanded="false">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</nav>
+		<div class="hero">
+			<div class="hero-content">
+				<h2 class="hero-title animate-on-scroll">Cuidado de Salud Profesional en Bogotá</h2>
+				<p class="hero-subtitle animate-on-scroll">Servicios de salud domiciliaria con personal calificado y experiencia desde 2019</p>
+				<div class="hero-actions">
+					<a href="#servicios" class="btn btn-primary animate-on-scroll">Nuestros Servicios</a>
+					<a href="#contacto" class="btn btn-outline animate-on-scroll">Solicitar Información</a>
+				</div>
+			</div>
+			<div class="hero-features">
+				<div class="feature animate-on-scroll">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+						<polyline points="22 4 12 14.01 9 11.01"></polyline>
+					</svg>
+					<span>Personal Calificado</span>
+				</div>
+				<div class="feature animate-on-scroll">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="12" cy="12" r="10"></circle>
+						<path d="M12 6v6l4 2"></path>
+					</svg>
+					<span>Atención 24/7</span>
+				</div>
+				<div class="feature animate-on-scroll">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+						<circle cx="12" cy="7" r="4"></circle>
+					</svg>
+					<span>Experiencia Garantizada</span>
+				</div>
+			</div>
 		</div>
 	</div>
 </header>
@@ -24,7 +74,7 @@
 	.header {
 		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 		color: white;
-		padding: 2rem 0;
+		padding: 1rem 0 4rem;
 		position: relative;
 		overflow: hidden;
 	}
@@ -38,34 +88,73 @@
 		bottom: 0;
 		background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
 		opacity: 0.3;
+		animation: backgroundMove 20s linear infinite;
 	}
 
-	.header-content {
+	@keyframes backgroundMove {
+		0% { background-position: 0 0; }
+		100% { background-position: 100px 100px; }
+	}
+
+	.nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
 		z-index: 1;
+		padding: 1rem 0;
+		margin-bottom: 2rem;
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 	}
 
 	.logo h1 {
 		color: white;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: 700;
 		margin-bottom: 0.25rem;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	}
 
 	.logo p {
 		color: rgba(255, 255, 255, 0.9);
-		font-size: 0.9rem;
+		font-size: 0.875rem;
 		font-weight: 500;
-		margin-bottom: 0.5rem;
 	}
 
-	.tagline {
-		color: rgba(255, 255, 255, 0.8);
-		font-size: 0.875rem;
-		font-style: italic;
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.nav-link {
+		color: rgba(255, 255, 255, 0.9);
+		text-decoration: none;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		position: relative;
+		padding: 0.5rem 0;
+	}
+
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: var(--accent);
+		transition: width 0.3s ease;
+	}
+
+	.nav-link:hover {
+		color: white;
+		transform: translateY(-1px);
+	}
+
+	.nav-link:hover::after {
+		width: 100%;
 	}
 
 	.header-actions {
@@ -74,35 +163,178 @@
 		align-items: center;
 	}
 
-	.established {
-		margin-top: 1rem;
-		text-align: center;
-		position: relative;
-		z-index: 1;
+	.mobile-menu-btn {
+		display: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+		transition: all 0.3s ease;
 	}
 
-	.established span {
-		background: rgba(255, 255, 255, 0.1);
-		padding: 0.5rem 1rem;
-		border-radius: 20px;
-		font-size: 0.875rem;
-		backdrop-filter: blur(10px);
+	.mobile-menu-btn span {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background: white;
+		margin: 4px 0;
+		transition: all 0.3s ease;
+	}
+
+	.mobile-menu-btn[aria-expanded="true"] span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.mobile-menu-btn[aria-expanded="true"] span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.mobile-menu-btn[aria-expanded="true"] span:nth-child(3) {
+		transform: rotate(-45deg) translate(5px, -5px);
+	}
+
+	.hero {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.hero-title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		line-height: 1.2;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.hero-subtitle {
+		font-size: 1.25rem;
+		color: rgba(255, 255, 255, 0.9);
+		margin-bottom: 2rem;
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-bottom: 3rem;
+	}
+
+	.hero-features {
+		display: flex;
+		justify-content: center;
+		gap: 3rem;
+		margin-top: 2rem;
+	}
+
+	.feature {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: rgba(255, 255, 255, 0.9);
+		transition: all 0.3s ease;
+	}
+
+	.feature:hover {
+		transform: translateY(-2px);
+	}
+
+	.feature svg {
+		color: var(--accent);
+		transition: all 0.3s ease;
+	}
+
+	.feature:hover svg {
+		transform: scale(1.1);
 	}
 
 	@media (max-width: 768px) {
-		.header-content {
+		.nav-links {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background: var(--primary-dark);
+			padding: 1rem;
 			flex-direction: column;
-			text-align: center;
-			gap: 1.5rem;
+			gap: 1rem;
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
 		}
 
-		.logo h1 {
-			font-size: 1.5rem;
+		.nav-links.active {
+			display: flex;
+		}
+
+		.mobile-menu-btn {
+			display: block;
+		}
+
+		.hero-title {
+			font-size: 2rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.125rem;
+		}
+
+		.hero-actions {
+			flex-direction: column;
+		}
+
+		.hero-features {
+			flex-direction: column;
+			gap: 1rem;
 		}
 
 		.header-actions {
-			flex-wrap: wrap;
-			justify-content: center;
+			display: none;
+		}
+	}
+
+	/* Animaciones */
+	.animate-on-scroll {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: all 0.6s ease;
+	}
+
+	.animate-on-scroll.fade-in {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 </style>
+
+<script>
+	// Manejo del menú móvil
+	const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+	const navLinks = document.querySelector('.nav-links');
+
+	mobileMenuBtn?.addEventListener('click', () => {
+		const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+		mobileMenuBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+		navLinks?.classList.toggle('active');
+	});
+
+	// Cerrar menú al hacer clic en un enlace
+	document.querySelectorAll('.nav-link').forEach(link => {
+		link.addEventListener('click', () => {
+			mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+			navLinks?.classList.remove('active');
+		});
+	});
+</script>
