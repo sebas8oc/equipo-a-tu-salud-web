@@ -3,80 +3,153 @@
 
 <header class="header">
 	<div class="container">
-		<nav class="nav">
+		<nav class="nav" role="navigation" aria-label="Navegación principal">
 			<div class="logo animate-on-scroll">
 				<h1>EQUIPO A TU SALUD</h1>
 				<p>ENSAYOS Y LABORATORIOS</p>
 			</div>
-			<div class="nav-links">
+			
+			<div class="nav-links" id="navLinks">
+				<a href="#nosotros" class="nav-link animate-on-scroll">Nosotros</a>
 				<a href="#servicios" class="nav-link animate-on-scroll">Servicios</a>
 				<a href="#equipo" class="nav-link animate-on-scroll">Equipo</a>
 				<a href="#precios" class="nav-link animate-on-scroll">Precios</a>
 				<a href="#contacto" class="nav-link animate-on-scroll">Contacto</a>
 			</div>
+			
 			<div class="header-actions">
-				<a href="tel:+573144906672" class="btn btn-outline animate-on-scroll">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<a href="tel:+573144906672" class="btn btn-outline animate-on-scroll" aria-label="Llamar al 314 4906672">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
 					</svg>
 					Llamar
 				</a>
 				<a href="#contacto" class="btn btn-primary animate-on-scroll">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
 					</svg>
 					Contactar
 				</a>
 			</div>
-			<button class="mobile-menu-btn" aria-label="Menú" aria-expanded="false">
-				<span></span>
-				<span></span>
-				<span></span>
+			
+			<button class="mobile-menu-btn" aria-label="Menú de navegación" aria-expanded="false" id="mobileMenuBtn">
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
+				<span class="hamburger-line"></span>
 			</button>
 		</nav>
+		
 		<div class="hero">
 			<div class="hero-content">
-				<h2 class="hero-title animate-on-scroll">Cuidado de Salud Profesional en Bogotá</h2>
-				<p class="hero-subtitle animate-on-scroll">Servicios de salud domiciliaria con personal calificado y experiencia desde 2019</p>
-				<div class="hero-actions">
-					<a href="#servicios" class="btn btn-primary animate-on-scroll">Nuestros Servicios</a>
-					<a href="#contacto" class="btn btn-outline animate-on-scroll">Solicitar Información</a>
+				<div class="hero-badge animate-on-scroll">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+					</svg>
+					Establecidos desde 2019
+				</div>
+				<h2 class="hero-title animate-on-scroll">
+					Cuidado de Salud 
+					<span class="gradient-text">Profesional</span> 
+					en Bogotá
+				</h2>
+				<p class="hero-subtitle animate-on-scroll">
+					Servicios de salud domiciliaria con personal altamente calificado y experiencia comprobada. 
+					Tu bienestar es nuestra prioridad.
+				</p>
+				<div class="hero-actions animate-on-scroll">
+					<a href="#servicios" class="btn btn-primary btn-lg">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+							<circle cx="8.5" cy="7" r="4"></circle>
+							<line x1="20" y1="8" x2="20" y2="14"></line>
+							<line x1="23" y1="11" x2="17" y2="11"></line>
+						</svg>
+						Nuestros Servicios
+					</a>
+					<a href="#contacto" class="btn btn-outline btn-lg">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+							<polyline points="22,6 12,13 2,6"></polyline>
+						</svg>
+						Solicitar Información
+					</a>
+				</div>
+				<div class="hero-stats animate-on-scroll">
+					<div class="stat">
+						<div class="stat-number">6+</div>
+						<div class="stat-label">Años de Experiencia</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">500+</div>
+						<div class="stat-label">Familias Atendidas</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">24/7</div>
+						<div class="stat-label">Disponibilidad</div>
+					</div>
 				</div>
 			</div>
+			
 			<div class="hero-features">
 				<div class="feature animate-on-scroll">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-						<polyline points="22 4 12 14.01 9 11.01"></polyline>
-					</svg>
-					<span>Personal Calificado</span>
+					<div class="feature-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+							<polyline points="22 4 12 14.01 9 11.01"></polyline>
+						</svg>
+					</div>
+					<div class="feature-content">
+						<h3>Personal Calificado</h3>
+						<p>Profesionales certificados con experiencia comprobada</p>
+					</div>
 				</div>
+				
 				<div class="feature animate-on-scroll">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<circle cx="12" cy="12" r="10"></circle>
-						<path d="M12 6v6l4 2"></path>
-					</svg>
-					<span>Atención 24/7</span>
+					<div class="feature-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="10"></circle>
+							<path d="M12 6v6l4 2"></path>
+						</svg>
+					</div>
+					<div class="feature-content">
+						<h3>Atención 24/7</h3>
+						<p>Disponibles cuando más nos necesites</p>
+					</div>
 				</div>
+				
 				<div class="feature animate-on-scroll">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-						<circle cx="12" cy="7" r="4"></circle>
-					</svg>
-					<span>Experiencia Garantizada</span>
+					<div class="feature-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+						</svg>
+					</div>
+					<div class="feature-content">
+						<h3>Confianza Garantizada</h3>
+						<p>Respaldo de años de experiencia y excelencia</p>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	
+	<!-- Decorative elements -->
+	<div class="hero-decoration">
+		<div class="decoration-circle decoration-1"></div>
+		<div class="decoration-circle decoration-2"></div>
+		<div class="decoration-circle decoration-3"></div>
 	</div>
 </header>
 
 <style>
 	.header {
-		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #1e3a8a 100%);
 		color: white;
-		padding: 1rem 0 4rem;
+		padding: var(--space-4) 0 var(--space-20);
 		position: relative;
 		overflow: hidden;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
 	}
 
 	.header::before {
@@ -86,14 +159,16 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-		opacity: 0.3;
-		animation: backgroundMove 20s linear infinite;
+		background: 
+			radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+			radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+			radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
+		animation: backgroundFloat 20s ease-in-out infinite;
 	}
 
-	@keyframes backgroundMove {
-		0% { background-position: 0 0; }
-		100% { background-position: 100px 100px; }
+	@keyframes backgroundFloat {
+		0%, 100% { transform: translateY(0px) rotate(0deg); }
+		50% { transform: translateY(-20px) rotate(1deg); }
 	}
 
 	.nav {
@@ -101,30 +176,38 @@
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
-		z-index: 1;
-		padding: 1rem 0;
-		margin-bottom: 2rem;
+		z-index: 10;
+		padding: var(--space-4) 0;
+		margin-bottom: var(--space-12);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 	}
 
+	.logo {
+		position: relative;
+		z-index: 1;
+	}
+
 	.logo h1 {
 		color: white;
-		font-size: 1.5rem;
-		font-weight: 700;
-		margin-bottom: 0.25rem;
+		font-size: 1.75rem;
+		font-weight: 800;
+		margin-bottom: var(--space-1);
 		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		letter-spacing: -0.02em;
 	}
 
 	.logo p {
 		color: rgba(255, 255, 255, 0.9);
 		font-size: 0.875rem;
 		font-weight: 500;
+		margin: 0;
+		letter-spacing: 0.05em;
 	}
 
 	.nav-links {
 		display: flex;
-		gap: 2rem;
+		gap: var(--space-8);
 		align-items: center;
 	}
 
@@ -132,9 +215,10 @@
 		color: rgba(255, 255, 255, 0.9);
 		text-decoration: none;
 		font-weight: 500;
-		transition: all 0.3s ease;
+		font-size: 0.95rem;
+		transition: all var(--transition-normal);
 		position: relative;
-		padding: 0.5rem 0;
+		padding: var(--space-2) 0;
 	}
 
 	.nav-link::after {
@@ -144,8 +228,8 @@
 		left: 0;
 		width: 0;
 		height: 2px;
-		background: var(--accent);
-		transition: width 0.3s ease;
+		background: linear-gradient(90deg, var(--accent), white);
+		transition: width var(--transition-normal);
 	}
 
 	.nav-link:hover {
@@ -159,7 +243,7 @@
 
 	.header-actions {
 		display: flex;
-		gap: 1rem;
+		gap: var(--space-3);
 		align-items: center;
 	}
 
@@ -168,101 +252,258 @@
 		background: none;
 		border: none;
 		cursor: pointer;
-		padding: 0.5rem;
-		transition: all 0.3s ease;
+		padding: var(--space-2);
+		transition: all var(--transition-normal);
+		position: relative;
+		z-index: 11;
 	}
 
-	.mobile-menu-btn span {
+	.hamburger-line {
 		display: block;
 		width: 24px;
 		height: 2px;
 		background: white;
 		margin: 4px 0;
-		transition: all 0.3s ease;
+		transition: all var(--transition-normal);
+		border-radius: 2px;
 	}
 
-	.mobile-menu-btn[aria-expanded="true"] span:nth-child(1) {
+	.mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(1) {
 		transform: rotate(45deg) translate(5px, 5px);
 	}
 
-	.mobile-menu-btn[aria-expanded="true"] span:nth-child(2) {
+	.mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(2) {
 		opacity: 0;
 	}
 
-	.mobile-menu-btn[aria-expanded="true"] span:nth-child(3) {
-		transform: rotate(-45deg) translate(5px, -5px);
+	.mobile-menu-btn[aria-expanded="true"] .hamburger-line:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -6px);
 	}
 
 	.hero {
 		position: relative;
 		z-index: 1;
 		text-align: center;
-		max-width: 800px;
+		max-width: 1000px;
 		margin: 0 auto;
 	}
 
+	.hero-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-2);
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		padding: var(--space-2) var(--space-4);
+		border-radius: var(--radius-full);
+		font-size: 0.875rem;
+		font-weight: 500;
+		margin-bottom: var(--space-6);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: rgba(255, 255, 255, 0.9);
+	}
+
 	.hero-title {
-		font-size: 3rem;
-		font-weight: 700;
-		margin-bottom: 1rem;
-		line-height: 1.2;
-		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		font-size: clamp(2.5rem, 6vw, 4rem);
+		font-weight: 800;
+		margin-bottom: var(--space-6);
+		line-height: 1.1;
+		text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		letter-spacing: -0.02em;
+	}
+
+	.gradient-text {
+		background: linear-gradient(135deg, var(--accent) 0%, #fbbf24 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 	}
 
 	.hero-subtitle {
-		font-size: 1.25rem;
+		font-size: clamp(1.125rem, 2.5vw, 1.375rem);
 		color: rgba(255, 255, 255, 0.9);
-		margin-bottom: 2rem;
+		margin-bottom: var(--space-8);
+		line-height: 1.6;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.hero-actions {
 		display: flex;
-		gap: 1rem;
+		gap: var(--space-4);
 		justify-content: center;
-		margin-bottom: 3rem;
+		margin-bottom: var(--space-12);
+		flex-wrap: wrap;
+	}
+
+	.btn-lg {
+		padding: var(--space-4) var(--space-8);
+		font-size: 1rem;
+		font-weight: 600;
+	}
+
+	.hero-stats {
+		display: flex;
+		justify-content: center;
+		gap: var(--space-12);
+		margin-bottom: var(--space-12);
+		flex-wrap: wrap;
+	}
+
+	.stat {
+		text-align: center;
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: white;
+		margin-bottom: var(--space-1);
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.stat-label {
+		font-size: 0.875rem;
+		color: rgba(255, 255, 255, 0.8);
+		font-weight: 500;
 	}
 
 	.hero-features {
-		display: flex;
-		justify-content: center;
-		gap: 3rem;
-		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: var(--space-6);
+		margin-top: var(--space-8);
 	}
 
 	.feature {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		color: rgba(255, 255, 255, 0.9);
-		transition: all 0.3s ease;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		padding: var(--space-6);
+		border-radius: var(--radius-xl);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		transition: all var(--transition-normal);
+		text-align: left;
 	}
 
 	.feature:hover {
-		transform: translateY(-2px);
+		transform: translateY(-4px);
+		background: rgba(255, 255, 255, 0.15);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 	}
 
-	.feature svg {
-		color: var(--accent);
-		transition: all 0.3s ease;
+	.feature-icon {
+		width: 3rem;
+		height: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: var(--radius-lg);
+		color: white;
+		margin-bottom: var(--space-4);
+		transition: all var(--transition-normal);
 	}
 
-	.feature:hover svg {
-		transform: scale(1.1);
+	.feature:hover .feature-icon {
+		background: var(--accent);
+		transform: rotate(5deg) scale(1.1);
+	}
+
+	.feature-content h3 {
+		color: white;
+		font-size: 1.25rem;
+		margin-bottom: var(--space-2);
+		font-weight: 600;
+	}
+
+	.feature-content p {
+		color: rgba(255, 255, 255, 0.8);
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	.hero-decoration {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
+
+	.decoration-circle {
+		position: absolute;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.05);
+		animation: float 6s ease-in-out infinite;
+	}
+
+	.decoration-1 {
+		width: 200px;
+		height: 200px;
+		top: 10%;
+		right: 10%;
+		animation-delay: 0s;
+	}
+
+	.decoration-2 {
+		width: 150px;
+		height: 150px;
+		bottom: 20%;
+		left: 5%;
+		animation-delay: 2s;
+	}
+
+	.decoration-3 {
+		width: 100px;
+		height: 100px;
+		top: 60%;
+		right: 20%;
+		animation-delay: 4s;
+	}
+
+	@keyframes float {
+		0%, 100% { transform: translateY(0px) rotate(0deg); }
+		50% { transform: translateY(-20px) rotate(180deg); }
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1024px) {
+		.hero-features {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: var(--space-4);
+		}
 	}
 
 	@media (max-width: 768px) {
+		.header {
+			padding: var(--space-3) 0 var(--space-16);
+			min-height: auto;
+		}
+
+		.nav {
+			margin-bottom: var(--space-8);
+		}
+
 		.nav-links {
 			display: none;
 			position: absolute;
 			top: 100%;
 			left: 0;
 			right: 0;
-			background: var(--primary-dark);
-			padding: 1rem;
+			background: rgba(37, 99, 235, 0.95);
+			backdrop-filter: blur(20px);
+			-webkit-backdrop-filter: blur(20px);
+			padding: var(--space-6);
 			flex-direction: column;
-			gap: 1rem;
-			backdrop-filter: blur(10px);
-			-webkit-backdrop-filter: blur(10px);
+			gap: var(--space-4);
+			border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-top: none;
 		}
 
 		.nav-links.active {
@@ -273,8 +514,12 @@
 			display: block;
 		}
 
+		.header-actions {
+			display: none;
+		}
+
 		.hero-title {
-			font-size: 2rem;
+			font-size: clamp(2rem, 8vw, 3rem);
 		}
 
 		.hero-subtitle {
@@ -283,58 +528,77 @@
 
 		.hero-actions {
 			flex-direction: column;
+			align-items: center;
+		}
+
+		.btn-lg {
+			width: 100%;
+			max-width: 300px;
+		}
+
+		.hero-stats {
+			gap: var(--space-8);
 		}
 
 		.hero-features {
+			grid-template-columns: 1fr;
+			gap: var(--space-4);
+		}
+
+		.feature {
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero-stats {
 			flex-direction: column;
-			gap: 1rem;
+			gap: var(--space-6);
 		}
 
-		.header-actions {
-			display: none;
-		}
-	}
-
-	/* Animaciones */
-	.animate-on-scroll {
-		opacity: 0;
-		transform: translateY(20px);
-		transition: all 0.6s ease;
-	}
-
-	.animate-on-scroll.fade-in {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	@keyframes fadeInUp {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
+		.stat-number {
+			font-size: 2rem;
 		}
 	}
 </style>
 
 <script>
-	// Manejo del menú móvil
-	const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-	const navLinks = document.querySelector('.nav-links');
+	// Manejo del menú móvil mejorado
+	const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+	const navLinks = document.getElementById('navLinks');
 
-	mobileMenuBtn?.addEventListener('click', () => {
-		const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-		mobileMenuBtn.setAttribute('aria-expanded', (!isExpanded).toString());
-		navLinks?.classList.toggle('active');
-	});
-
-	// Cerrar menú al hacer clic en un enlace
-	document.querySelectorAll('.nav-link').forEach(link => {
-		link.addEventListener('click', () => {
-			mobileMenuBtn?.setAttribute('aria-expanded', 'false');
-			navLinks?.classList.remove('active');
+	if (mobileMenuBtn && navLinks) {
+		mobileMenuBtn.addEventListener('click', () => {
+			const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+			mobileMenuBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+			navLinks.classList.toggle('active');
 		});
+
+		// Cerrar menú al hacer clic en un enlace
+		navLinks.querySelectorAll('.nav-link').forEach(link => {
+			link.addEventListener('click', () => {
+				mobileMenuBtn.setAttribute('aria-expanded', 'false');
+				navLinks.classList.remove('active');
+			});
+		});
+
+		// Cerrar menú al hacer clic fuera
+		document.addEventListener('click', (e) => {
+			if (!mobileMenuBtn.contains(e.target as Node) && !navLinks.contains(e.target as Node)) {
+				mobileMenuBtn.setAttribute('aria-expanded', 'false');
+				navLinks.classList.remove('active');
+			}
+		});
+	}
+
+	// Efecto parallax sutil en el header
+	window.addEventListener('scroll', () => {
+		const scrolled = window.pageYOffset;
+		const header = document.querySelector('.header');
+		if (header) {
+			const rate = scrolled * -0.5;
+			header.style.transform = `translateY(${rate}px)`;
+		}
 	});
 </script>
+</header>

@@ -20,10 +20,46 @@ import Footer from '../components/Footer.astro';
 	</main>
 	<Footer />
 	
-	<!-- Floating WhatsApp Button -->
-	<a href="https://wa.me/573144906672" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
-		<div class="whatsapp-icon">💬</div>
-	</a>
+	<!-- Floating Action Buttons -->
+	<div class="floating-actions">
+		<!-- WhatsApp Button -->
+		<a href="https://wa.me/573144906672?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20salud" 
+		   class="fab whatsapp-fab" 
+		   target="_blank" 
+		   rel="noopener noreferrer"
+		   title="Contactar por WhatsApp"
+		   aria-label="Contactar por WhatsApp">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+			</svg>
+			<span class="fab-tooltip">WhatsApp</span>
+		</a>
+		
+		<!-- Phone Button -->
+		<a href="tel:+573144906672" 
+		   class="fab phone-fab" 
+		   title="Llamar ahora"
+		   aria-label="Llamar al 314 4906672">
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+			</svg>
+			<span class="fab-tooltip">Llamar</span>
+		</a>
+	</div>
+
+	<!-- Cookie Notice -->
+	<div id="cookieNotice" class="cookie-notice">
+		<div class="cookie-content">
+			<div class="cookie-text">
+				<h4>🍪 Uso de Cookies</h4>
+				<p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web y analizar el tráfico.</p>
+			</div>
+			<div class="cookie-actions">
+				<button id="acceptCookies" class="btn btn-primary btn-sm">Aceptar</button>
+				<button id="declineCookies" class="btn btn-outline btn-sm">Rechazar</button>
+			</div>
+		</div>
+	</div>
 </Layout>
 
 <style>
@@ -31,56 +67,400 @@ import Footer from '../components/Footer.astro';
 		position: relative;
 	}
 
-	.whatsapp-float {
+	/* Floating Action Buttons */
+	.floating-actions {
 		position: fixed;
-		bottom: 2rem;
-		right: 2rem;
-		width: 60px;
-		height: 60px;
-		background: #25D366;
-		border-radius: 50%;
+		bottom: var(--space-6);
+		right: var(--space-6);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-3);
+		z-index: var(--z-fixed);
+	}
+
+	.fab {
+		width: 56px;
+		height: 56px;
+		border-radius: var(--radius-full);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		transition: all 0.3s ease;
-		z-index: 1000;
 		text-decoration: none;
-		animation: pulse 2s infinite;
-	}
-
-	.whatsapp-float:hover {
-		transform: scale(1.1);
-		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-	}
-
-	.whatsapp-icon {
-		font-size: 1.5rem;
 		color: white;
+		box-shadow: var(--shadow-lg);
+		transition: all var(--transition-normal);
+		position: relative;
+		overflow: hidden;
 	}
 
-	@keyframes pulse {
+	.fab::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: inherit;
+		border-radius: inherit;
+		transition: transform var(--transition-normal);
+		z-index: -1;
+	}
+
+	.fab:hover::before {
+		transform: scale(1.1);
+	}
+
+	.fab:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-xl);
+	}
+
+	.whatsapp-fab {
+		background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+		animation: pulse-whatsapp 2s infinite;
+	}
+
+	.phone-fab {
+		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+	}
+
+	.fab-tooltip {
+		position: absolute;
+		right: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		background: var(--gray-900);
+		color: white;
+		padding: var(--space-2) var(--space-3);
+		border-radius: var(--radius-md);
+		font-size: 0.875rem;
+		font-weight: 500;
+		white-space: nowrap;
+		opacity: 0;
+		visibility: hidden;
+		transition: all var(--transition-normal);
+		margin-right: var(--space-3);
+		pointer-events: none;
+	}
+
+	.fab-tooltip::after {
+		content: '';
+		position: absolute;
+		left: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		border: 6px solid transparent;
+		border-left-color: var(--gray-900);
+	}
+
+	.fab:hover .fab-tooltip {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@keyframes pulse-whatsapp {
 		0% {
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(37, 211, 102, 0.7);
+			box-shadow: var(--shadow-lg), 0 0 0 0 rgba(37, 211, 102, 0.7);
 		}
 		70% {
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 10px rgba(37, 211, 102, 0);
+			box-shadow: var(--shadow-lg), 0 0 0 10px rgba(37, 211, 102, 0);
 		}
 		100% {
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(37, 211, 102, 0);
+			box-shadow: var(--shadow-lg), 0 0 0 0 rgba(37, 211, 102, 0);
 		}
 	}
 
+	/* Cookie Notice */
+	.cookie-notice {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: white;
+		border-top: 1px solid var(--gray-200);
+		box-shadow: var(--shadow-xl);
+		padding: var(--space-4);
+		z-index: var(--z-modal);
+		transform: translateY(100%);
+		transition: transform var(--transition-slow);
+	}
+
+	.cookie-notice.show {
+		transform: translateY(0);
+	}
+
+	.cookie-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-6);
+	}
+
+	.cookie-text h4 {
+		color: var(--gray-900);
+		font-size: 1.125rem;
+		margin-bottom: var(--space-2);
+		font-weight: 600;
+	}
+
+	.cookie-text p {
+		color: var(--gray-600);
+		margin: 0;
+		font-size: 0.875rem;
+		line-height: 1.5;
+	}
+
+	.cookie-actions {
+		display: flex;
+		gap: var(--space-3);
+		flex-shrink: 0;
+	}
+
+	.btn-sm {
+		padding: var(--space-2) var(--space-4);
+		font-size: 0.875rem;
+	}
+
+	/* Responsive Design */
 	@media (max-width: 768px) {
-		.whatsapp-float {
-			width: 50px;
-			height: 50px;
-			bottom: 1rem;
-			right: 1rem;
+		.floating-actions {
+			bottom: var(--space-4);
+			right: var(--space-4);
 		}
 
-		.whatsapp-icon {
-			font-size: 1.25rem;
+		.fab {
+			width: 48px;
+			height: 48px;
+		}
+
+		.fab svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		.fab-tooltip {
+			display: none;
+		}
+
+		.cookie-content {
+			flex-direction: column;
+			text-align: center;
+			gap: var(--space-4);
+		}
+
+		.cookie-actions {
+			width: 100%;
+			justify-content: center;
+		}
+
+		.btn-sm {
+			flex: 1;
+			max-width: 120px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.floating-actions {
+			bottom: var(--space-3);
+			right: var(--space-3);
+		}
+
+		.fab {
+			width: 44px;
+			height: 44px;
+		}
+
+		.fab svg {
+			width: 18px;
+			height: 18px;
+		}
+	}
+
+	/* Accessibility improvements */
+	@media (prefers-reduced-motion: reduce) {
+		.fab {
+			animation: none;
+		}
+		
+		.fab:hover {
+			transform: none;
+		}
+	}
+
+	/* High contrast mode */
+	@media (prefers-contrast: high) {
+		.fab {
+			border: 2px solid white;
+		}
+		
+		.cookie-notice {
+			border-top: 2px solid var(--gray-900);
 		}
 	}
 </style>
+
+<script>
+	// Cookie Notice Management
+	class CookieManager {
+		constructor() {
+			this.cookieNotice = document.getElementById('cookieNotice');
+			this.acceptBtn = document.getElementById('acceptCookies');
+			this.declineBtn = document.getElementById('declineCookies');
+			this.init();
+		}
+
+		init() {
+			// Check if user has already made a choice
+			if (!this.getCookie('cookieConsent')) {
+				this.showNotice();
+			}
+
+			// Event listeners
+			this.acceptBtn?.addEventListener('click', () => this.acceptCookies());
+			this.declineBtn?.addEventListener('click', () => this.declineCookies());
+		}
+
+		showNotice() {
+			setTimeout(() => {
+				this.cookieNotice?.classList.add('show');
+			}, 2000); // Show after 2 seconds
+		}
+
+		hideNotice() {
+			this.cookieNotice?.classList.remove('show');
+		}
+
+		acceptCookies() {
+			this.setCookie('cookieConsent', 'accepted', 365);
+			this.hideNotice();
+			this.enableAnalytics();
+		}
+
+		declineCookies() {
+			this.setCookie('cookieConsent', 'declined', 365);
+			this.hideNotice();
+		}
+
+		enableAnalytics() {
+			// Here you would enable Google Analytics or other tracking
+			console.log('Analytics enabled');
+		}
+
+		setCookie(name: string, value: string, days: number) {
+			const expires = new Date();
+			expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+			document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+		}
+
+		getCookie(name: string) {
+			const nameEQ = name + "=";
+			const ca = document.cookie.split(';');
+			for (let i = 0; i < ca.length; i++) {
+				let c = ca[i];
+				while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+				if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+			}
+			return null;
+		}
+	}
+
+	// Initialize cookie manager
+	new CookieManager();
+
+	// Enhanced floating buttons behavior
+	const fabs = document.querySelectorAll('.fab');
+	
+	fabs.forEach(fab => {
+		fab.addEventListener('click', function(e) {
+			// Add click animation
+			this.style.transform = 'scale(0.95)';
+			setTimeout(() => {
+				this.style.transform = '';
+			}, 150);
+		});
+	});
+
+	// Hide floating buttons when scrolling down, show when scrolling up
+	let lastScrollTop = 0;
+	const floatingActions = document.querySelector('.floating-actions');
+	
+	window.addEventListener('scroll', () => {
+		const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		
+		if (scrollTop > lastScrollTop && scrollTop > 100) {
+			// Scrolling down
+			floatingActions?.classList.add('hidden');
+		} else {
+			// Scrolling up
+			floatingActions?.classList.remove('hidden');
+		}
+		
+		lastScrollTop = scrollTop;
+	});
+
+	// Add hidden class styles
+	const style = document.createElement('style');
+	style.textContent = `
+		.floating-actions.hidden {
+			transform: translateX(100px);
+			opacity: 0;
+		}
+	`;
+	document.head.appendChild(style);
+
+	// Performance optimization: Intersection Observer for animations
+	const observerOptions = {
+		root: null,
+		rootMargin: '0px 0px -10% 0px',
+		threshold: 0.1
+	};
+
+	const animationObserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry, index) => {
+			if (entry.isIntersecting) {
+				setTimeout(() => {
+					entry.target.classList.add('fade-in');
+				}, index * 100);
+				animationObserver.unobserve(entry.target);
+			}
+		});
+	}, observerOptions);
+
+	// Observe all elements with animation class
+	document.querySelectorAll('.animate-on-scroll').forEach(el => {
+		animationObserver.observe(el);
+	});
+
+	// Preload critical resources
+	const preloadCriticalResources = () => {
+		const criticalImages = [
+			// Add any critical images here
+		];
+
+		criticalImages.forEach(src => {
+			const link = document.createElement('link');
+			link.rel = 'preload';
+			link.as = 'image';
+			link.href = src;
+			document.head.appendChild(link);
+		});
+	};
+
+	// Initialize preloading
+	preloadCriticalResources();
+
+	// Service Worker registration for PWA
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', () => {
+			navigator.serviceWorker.register('/sw.js')
+				.then(registration => {
+					console.log('SW registered: ', registration);
+				})
+				.catch(registrationError => {
+					console.log('SW registration failed: ', registrationError);
+				});
+		});
+	}
+</script>
