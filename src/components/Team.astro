@@ -406,7 +406,7 @@
 
 	.btn-light {
 		background: white;
-		color: var(--primary);
+		color: #1d4ed8;
 		padding: 1rem 2rem;
 		border-radius: 12px;
 		font-weight: 600;
@@ -416,11 +416,15 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0.5rem;
+		box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(29, 78, 216, 0.2);
 	}
 
 	.btn-light:hover {
-		background: var(--neutral-100);
+		background: #1d4ed8;
+		color: white;
 		transform: translateY(-2px);
+		box-shadow: 0 8px 25px 0 rgba(29, 78, 216, 0.3);
 	}
 
 	.btn-outline-light {
@@ -436,11 +440,15 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0.5rem;
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 	}
 
 	.btn-outline-light:hover {
-		background: rgba(255, 255, 255, 0.1);
+		background: white;
+		color: #1d4ed8;
 		transform: translateY(-2px);
+		box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.3);
 	}
 
 	@media (max-width: 768px) {

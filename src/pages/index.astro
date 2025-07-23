@@ -116,12 +116,14 @@ import Footer from '../components/Footer.astro';
 	}
 
 	.whatsapp-fab {
-		background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+		background: linear-gradient(135deg, #25D366 0%, #1faa59 100%);
 		animation: pulse-whatsapp 2s infinite;
+		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
 	}
 
 	.phone-fab {
-		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+		background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+		box-shadow: 0 4px 20px rgba(29, 78, 216, 0.4);
 	}
 
 	.fab-tooltip {
@@ -129,7 +131,9 @@ import Footer from '../components/Footer.astro';
 		right: 100%;
 		top: 50%;
 		transform: translateY(-50%);
-		background: var(--gray-900);
+		background: rgba(17, 24, 39, 0.95);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 		color: white;
 		padding: var(--space-2) var(--space-3);
 		border-radius: var(--radius-md);
@@ -141,6 +145,7 @@ import Footer from '../components/Footer.astro';
 		transition: all var(--transition-normal);
 		margin-right: var(--space-3);
 		pointer-events: none;
+		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.fab-tooltip::after {
@@ -150,7 +155,7 @@ import Footer from '../components/Footer.astro';
 		top: 50%;
 		transform: translateY(-50%);
 		border: 6px solid transparent;
-		border-left-color: var(--gray-900);
+		border-left-color: rgba(17, 24, 39, 0.95);
 	}
 
 	.fab:hover .fab-tooltip {
