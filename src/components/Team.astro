@@ -3,15 +3,17 @@
 
 <section id="equipo" class="section">
 	<div class="container">
-		<div class="section-header animate-on-scroll">
+		<div class="text-center mb-16">
 			<span class="section-tag">Equipo</span>
 			<h2>Prestadoras Destacadas</h2>
-			<p>Conoce a nuestro equipo de profesionales experimentados que brindan atención de calidad</p>
+			<p class="lead">
+				Conoce a nuestro equipo de profesionales experimentados que brindan atención de calidad
+			</p>
 		</div>
 		
-		<div class="team-grid">
+		<div class="grid grid-cols-3 mb-16">
 			<div class="team-member animate-on-scroll">
-				<div class="member-card">
+				<div class="member-card card">
 					<div class="member-avatar">
 						<div class="avatar-placeholder">IS</div>
 						<div class="member-status online"></div>
@@ -43,14 +45,14 @@
 							</span>
 						</div>
 						<div class="member-actions">
-							<a href="#contacto" class="btn btn-outline">Contactar</a>
+							<a href="#contacto" class="btn btn-outline btn-sm">Contactar</a>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="team-member animate-on-scroll">
-				<div class="member-card">
+				<div class="member-card card">
 					<div class="member-avatar">
 						<div class="avatar-placeholder">ML</div>
 						<div class="member-status online"></div>
@@ -83,14 +85,14 @@
 							</span>
 						</div>
 						<div class="member-actions">
-							<a href="#contacto" class="btn btn-outline">Contactar</a>
+							<a href="#contacto" class="btn btn-outline btn-sm">Contactar</a>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="team-member animate-on-scroll">
-				<div class="member-card">
+				<div class="member-card card">
 					<div class="member-avatar">
 						<div class="avatar-placeholder">CR</div>
 						<div class="member-status online"></div>
@@ -123,7 +125,7 @@
 							</span>
 						</div>
 						<div class="member-actions">
-							<a href="#contacto" class="btn btn-outline">Contactar</a>
+							<a href="#contacto" class="btn btn-outline btn-sm">Contactar</a>
 						</div>
 					</div>
 				</div>
@@ -131,13 +133,17 @@
 		</div>
 		
 		<div class="cta-section">
-			<div class="cta-content">
+			<div class="text-center">
 				<h3>¿Necesitas nuestros servicios?</h3>
-				<p>Contacta con nosotros para una cotización personalizada y descubre cómo podemos ayudarte</p>
-				<div class="cta-actions">
-					<a href="#contacto" class="btn btn-light">Solicitar Cotización</a>
-					<a href="tel:+573144906672" class="btn btn-outline-light">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<p class="lead mb-8">
+					Contacta con nosotros para una cotización personalizada y descubre cómo podemos ayudarte
+				</p>
+				<div class="flex gap-4 justify-center">
+					<a href="#contacto" class="btn btn-primary btn-lg">
+						Solicitar Cotización
+					</a>
+					<a href="tel:+573144906672" class="btn btn-outline btn-lg">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
 						</svg>
 						Llamar Ahora
@@ -149,40 +155,19 @@
 </section>
 
 <style>
-	.section {
-		background: var(--neutral-50);
-		position: relative;
-		overflow: hidden;
-	}
-
-	.section::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 1px;
-		background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
-	}
-
-	.section-header {
-		text-align: center;
-		margin-bottom: 4rem;
-	}
-
 	.section-tag {
 		display: inline-block;
 		background: var(--primary-light);
 		color: var(--primary);
-		padding: 0.5rem 1rem;
-		border-radius: 20px;
+		padding: var(--space-2) var(--space-4);
+		border-radius: var(--radius-full);
 		font-size: 0.875rem;
 		font-weight: 600;
-		margin-bottom: 1rem;
+		margin-bottom: var(--space-6);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		box-shadow: var(--shadow-sm);
-		transition: all 0.3s ease;
+		transition: all var(--transition-normal);
 	}
 
 	.section-tag:hover {
@@ -190,89 +175,16 @@
 		box-shadow: var(--shadow-md);
 	}
 
-	.section-header h2 {
-		color: var(--gray-900);
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
-		position: relative;
-		display: inline-block;
-	}
-
-	.section-header h2::after {
-		content: '';
-		position: absolute;
-		bottom: -10px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 60px;
-		height: 3px;
-		background: var(--primary);
-		border-radius: 2px;
-		transition: width 0.3s ease;
-	}
-
-	.section-header:hover h2::after {
-		width: 100px;
-	}
-
-	.section-header p {
-		font-size: 1.25rem;
-		color: var(--gray-900);
-		max-width: 600px;
-		margin: 0 auto;
-		font-weight: 600;
-	}
-
-	.team-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		margin-bottom: 4rem;
-	}
-
-	.team-member {
-		perspective: 1000px;
-	}
-
 	.member-card {
-		background: white;
-		border-radius: 16px;
-		padding: 2rem;
-		box-shadow: var(--shadow-sm);
-		transition: all 0.3s ease;
-		border: 1px solid var(--neutral-200);
+		text-align: center;
 		position: relative;
 		overflow: hidden;
-		transform-style: preserve-3d;
-	}
-
-	.member-card::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(135deg, var(--primary-light) 0%, transparent 100%);
-		opacity: 0;
-		transition: opacity 0.3s ease;
-		z-index: 0;
-	}
-
-	.member-card:hover {
-		transform: translateY(-4px) rotateX(5deg);
-		box-shadow: var(--shadow-lg);
-		border-color: var(--primary-light);
-	}
-
-	.member-card:hover::before {
-		opacity: 0.1;
 	}
 
 	.member-avatar {
 		width: 100px;
 		height: 100px;
-		margin: 0 auto 1.5rem;
+		margin: 0 auto var(--space-6);
 		position: relative;
 	}
 
@@ -287,7 +199,7 @@
 		font-size: 2rem;
 		font-weight: 600;
 		color: var(--primary);
-		transition: all 0.3s ease;
+		transition: all var(--transition-normal);
 	}
 
 	.member-card:hover .avatar-placeholder {
@@ -310,32 +222,26 @@
 		background: var(--success);
 	}
 
-	.member-info {
-		text-align: center;
-		position: relative;
-		z-index: 1;
-	}
-
 	.member-info h3 {
-		color: var(--gray-900);
-		font-size: 1.5rem;
-		margin-bottom: 0.5rem;
+		margin-bottom: var(--space-2);
 	}
 
 	.role {
 		color: var(--primary);
 		font-weight: 500;
-		margin-bottom: 1rem;
+		margin-bottom: var(--space-4);
+		font-size: 1rem;
 	}
 
 	.experience {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 0.5rem;
-		color: var(--gray-800);
-		margin-bottom: 1rem;
-		font-weight: 600;
+		gap: var(--space-2);
+		color: var(--gray-600);
+		margin-bottom: var(--space-4);
+		font-weight: 500;
+		font-size: 0.875rem;
 	}
 
 	.experience svg {
@@ -345,22 +251,22 @@
 	.specialties {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5rem;
+		gap: var(--space-2);
 		justify-content: center;
-		margin-bottom: 1.5rem;
+		margin-bottom: var(--space-6);
 	}
 
 	.specialty {
 		display: flex;
 		align-items: center;
-		gap: 0.25rem;
+		gap: var(--space-1);
 		background: var(--gray-100);
-		color: var(--gray-800);
-		padding: 0.5rem 0.75rem;
-		border-radius: 20px;
-		font-size: 0.875rem;
-		transition: all 0.3s ease;
-		font-weight: 600;
+		color: var(--gray-700);
+		padding: var(--space-2) var(--space-3);
+		border-radius: var(--radius-full);
+		font-size: 0.75rem;
+		transition: all var(--transition-normal);
+		font-weight: 500;
 	}
 
 	.specialty:hover {
@@ -371,125 +277,75 @@
 
 	.specialty svg {
 		color: var(--primary);
-	}
-
-	.member-actions {
-		margin-top: 1.5rem;
+		flex-shrink: 0;
 	}
 
 	.cta-section {
-		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-		padding: 4rem 2rem;
-		border-radius: 16px;
-		text-align: center;
+		background: var(--primary);
+		padding: var(--space-16);
+		border-radius: var(--radius-3xl);
 		color: white;
-		margin-top: 4rem;
+		margin-top: var(--space-16);
+		position: relative;
+		overflow: hidden;
 	}
 
-	.cta-content h3 {
-		font-size: 2rem;
-		margin-bottom: 1rem;
-		color: white;
+	.cta-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+		opacity: 0.1;
 	}
 
-	.cta-content p {
-		font-size: 1.25rem;
+	.cta-section > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	.cta-section h3 {
+		color: white;
+		margin-bottom: var(--space-4);
+	}
+
+	.cta-section .lead {
 		color: rgba(255, 255, 255, 0.9);
-		margin-bottom: 2rem;
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
 	}
 
-	.cta-actions {
+	/* Utilidades de flexbox */
+	.flex {
 		display: flex;
-		gap: 1rem;
+	}
+
+	.gap-4 {
+		gap: var(--space-4);
+	}
+
+	.justify-center {
 		justify-content: center;
 	}
 
-	.btn-light {
-		background: white;
-		color: #1d4ed8;
-		padding: 1rem 2rem;
-		border-radius: 12px;
-		font-weight: 600;
-		text-decoration: none;
-		transition: all 0.2s ease;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-		box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
-		border: 1px solid rgba(29, 78, 216, 0.2);
-	}
-
-	.btn-light:hover {
-		background: #1d4ed8;
-		color: white;
-		transform: translateY(-2px);
-		box-shadow: 0 8px 25px 0 rgba(29, 78, 216, 0.3);
-	}
-
-	.btn-outline-light {
-		background: transparent;
-		border: 2px solid white;
-		color: white;
-		padding: 1rem 2rem;
-		border-radius: 12px;
-		font-weight: 600;
-		text-decoration: none;
-		transition: all 0.2s ease;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-	}
-
-	.btn-outline-light:hover {
-		background: white;
-		color: #1d4ed8;
-		transform: translateY(-2px);
-		box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.3);
-	}
-
+	/* Responsive Design */
 	@media (max-width: 768px) {
-		.team-grid {
+		.grid-cols-3 {
 			grid-template-columns: 1fr;
-			gap: 1.5rem;
-		}
-
-		.member-card {
-			padding: 1.5rem;
-		}
-
-		.section-header h2 {
-			font-size: 2rem;
-		}
-
-		.section-header p {
-			font-size: 1.125rem;
 		}
 
 		.cta-section {
-			padding: 2rem 1rem;
+			padding: var(--space-12);
 		}
 
-		.cta-content h3 {
-			font-size: 1.75rem;
-		}
-
-		.cta-content p {
-			font-size: 1.125rem;
-		}
-
-		.cta-actions {
+		.flex {
 			flex-direction: column;
+			align-items: center;
 		}
 
-		.btn-light, .btn-outline-light {
+		.btn-lg {
 			width: 100%;
+			max-width: 300px;
 		}
 	}
 
@@ -503,16 +359,5 @@
 	.animate-on-scroll.fade-in {
 		opacity: 1;
 		transform: translateY(0);
-	}
-
-	@keyframes fadeInUp {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
 	}
 </style>
