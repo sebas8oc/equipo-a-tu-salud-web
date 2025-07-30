@@ -131,7 +131,7 @@ import Footer from '../components/Footer.astro';
 		right: 100%;
 		top: 50%;
 		transform: translateY(-50%);
-		background: rgba(17, 24, 39, 0.95);
+		background: rgba(17, 24, 39, 0.98);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		color: white;
@@ -146,6 +146,7 @@ import Footer from '../components/Footer.astro';
 		margin-right: var(--space-3);
 		pointer-events: none;
 		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: var(--shadow-lg);
 	}
 
 	.fab-tooltip::after {
@@ -155,7 +156,7 @@ import Footer from '../components/Footer.astro';
 		top: 50%;
 		transform: translateY(-50%);
 		border: 6px solid transparent;
-		border-left-color: rgba(17, 24, 39, 0.95);
+		border-left-color: rgba(17, 24, 39, 0.98);
 	}
 
 	.fab:hover .fab-tooltip {
@@ -211,10 +212,11 @@ import Footer from '../components/Footer.astro';
 	}
 
 	.cookie-text p {
-		color: var(--gray-600);
+		color: var(--gray-700);
 		margin: 0;
 		font-size: 0.875rem;
 		line-height: 1.5;
+		font-weight: 500;
 	}
 
 	.cookie-actions {

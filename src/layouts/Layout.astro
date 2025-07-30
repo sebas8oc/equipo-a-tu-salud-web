@@ -209,7 +209,7 @@ const { title, description = "Servicios de salud para mejorar tu calidad de vida
 	/* Tipografía mejorada */
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Poppins', sans-serif;
-		color: var(--neutral-900);
+		color: var(--gray-900);
 		line-height: 1.2;
 		font-weight: 600;
 		margin-bottom: var(--space-4);
@@ -245,7 +245,7 @@ const { title, description = "Servicios de salud para mejorar tu calidad de vida
 
 	p {
 		margin-bottom: var(--space-4);
-		color: var(--neutral-700);
+		color: var(--gray-700);
 		line-height: 1.7;
 	}
 
@@ -299,16 +299,16 @@ const { title, description = "Servicios de salud para mejorar tu calidad de vida
 	}
 
 	.btn-primary {
-		background: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 		color: white;
-		box-shadow: 0 4px 14px 0 rgba(29, 78, 216, 0.4);
+		box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.4);
 		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.btn-primary:hover {
-		background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+		background: linear-gradient(135deg, var(--primary-dark) 0%, #1e3a8a 100%);
 		transform: translateY(-2px);
-		box-shadow: 0 8px 25px 0 rgba(29, 78, 216, 0.5);
+		box-shadow: 0 8px 25px 0 rgba(37, 99, 235, 0.5);
 		color: white;
 	}
 
@@ -326,18 +326,19 @@ const { title, description = "Servicios de salud para mejorar tu calidad de vida
 	}
 
 	.btn-outline {
-		background: transparent;
-		border: 2px solid #1d4ed8;
-		color: #1d4ed8;
+		background: rgba(255, 255, 255, 0.9);
+		border: 2px solid var(--primary);
+		color: var(--primary);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
+		box-shadow: var(--shadow-sm);
 	}
 
 	.btn-outline:hover {
-		background: #1d4ed8;
+		background: var(--primary);
 		color: white;
 		transform: translateY(-2px);
-		box-shadow: 0 8px 25px 0 rgba(29, 78, 216, 0.3);
+		box-shadow: 0 8px 25px 0 rgba(37, 99, 235, 0.3);
 	}
 
 	.btn-light {

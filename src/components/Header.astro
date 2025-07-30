@@ -255,30 +255,32 @@
 	}
 
 	.header-actions .btn-outline {
-		background: rgba(255, 255, 255, 0.1);
-		border-color: rgba(255, 255, 255, 0.8);
+		background: rgba(255, 255, 255, 0.15);
+		border-color: rgba(255, 255, 255, 0.9);
 		color: white;
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
+		box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
 	}
 
 	.header-actions .btn-outline:hover {
 		background: white;
-		color: #1d4ed8;
+		color: var(--primary);
 		border-color: white;
+		box-shadow: 0 8px 25px 0 rgba(255, 255, 255, 0.3);
 	}
 
 	.header-actions .btn-primary {
-		background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-		color: #1f2937;
+		background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+		color: var(--gray-900);
 		font-weight: 700;
-		box-shadow: 0 4px 14px 0 rgba(251, 191, 36, 0.4);
+		box-shadow: 0 4px 14px 0 rgba(245, 158, 11, 0.4);
 	}
 
 	.header-actions .btn-primary:hover {
-		background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-		color: #1f2937;
-		box-shadow: 0 8px 25px 0 rgba(251, 191, 36, 0.5);
+		background: linear-gradient(135deg, var(--accent-dark) 0%, #d97706 100%);
+		color: var(--gray-900);
+		box-shadow: 0 8px 25px 0 rgba(245, 158, 11, 0.5);
 	}
 	.mobile-menu-btn {
 		display: none;
